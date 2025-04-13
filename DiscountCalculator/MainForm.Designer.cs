@@ -3,32 +3,21 @@
     partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.DataVisualization.Charting.Chart discountChart; // График
 
         private void InitializeComponent()
         {
             this.originalPriceTextBox = new System.Windows.Forms.TextBox();
             this.discountTextBox = new System.Windows.Forms.TextBox();
             this.currencyComboBox = new System.Windows.Forms.ComboBox();
-            this.baseCurrencyComboBox = new System.Windows.Forms.ComboBox();
+            this.baseCurrencyComboBox = new System.Windows.Forms.ComboBox();  // Новый комбобокс для базовой валюты
             this.calculateButton = new System.Windows.Forms.Button();
             this.resultLabel = new System.Windows.Forms.Label();
             this.originalPriceLabel = new System.Windows.Forms.Label();
             this.discountLabel = new System.Windows.Forms.Label();
             this.currencyLabel = new System.Windows.Forms.Label();
-            this.baseCurrencyLabel = new System.Windows.Forms.Label();
-            this.discountChart = new System.Windows.Forms.DataVisualization.Charting.Chart(); // Инициализация графика
+            this.baseCurrencyLabel = new System.Windows.Forms.Label();  // Подпись для базовой валюты
 
             this.SuspendLayout();
-
-            // 
-            // discountChart
-            // 
-            this.discountChart.Location = new System.Drawing.Point(12, 250); // Размещение графика
-            this.discountChart.Name = "discountChart";
-            this.discountChart.Size = new System.Drawing.Size(260, 150); // Размер графика
-            this.discountChart.TabIndex = 12;
-            this.discountChart.Text = "discountChart";
 
             // 
             // originalPriceLabel
@@ -36,9 +25,9 @@
             this.originalPriceLabel.AutoSize = true;
             this.originalPriceLabel.Location = new System.Drawing.Point(12, 9);
             this.originalPriceLabel.Name = "originalPriceLabel";
-            this.originalPriceLabel.Size = new System.Drawing.Size(128, 13);
+            this.originalPriceLabel.Size = new System.Drawing.Size(138, 13);
             this.originalPriceLabel.TabIndex = 0;
-            this.originalPriceLabel.Text = "Изначальная стоимость (USD):";
+            this.originalPriceLabel.Text = "Изначальная стоимость:";
 
             // 
             // originalPriceTextBox
@@ -67,35 +56,10 @@
             this.discountTextBox.TabIndex = 3;
 
             // 
-            // currencyLabel
-            // 
-            this.currencyLabel.AutoSize = true;
-            this.currencyLabel.Location = new System.Drawing.Point(12, 89);
-            this.currencyLabel.Name = "currencyLabel";
-            this.currencyLabel.Size = new System.Drawing.Size(113, 13);
-            this.currencyLabel.TabIndex = 4;
-            this.currencyLabel.Text = "Выберите валюту:";
-
-            // 
-            // currencyComboBox
-            // 
-            this.currencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.currencyComboBox.FormattingEnabled = true;
-            this.currencyComboBox.Items.AddRange(new object[] {
-            "USD",
-            "EUR",
-            "RUB",
-            "UAH"});
-            this.currencyComboBox.Location = new System.Drawing.Point(12, 105);
-            this.currencyComboBox.Name = "currencyComboBox";
-            this.currencyComboBox.Size = new System.Drawing.Size(121, 21);
-            this.currencyComboBox.TabIndex = 5;
-
-            // 
             // baseCurrencyLabel
             // 
             this.baseCurrencyLabel.AutoSize = true;
-            this.baseCurrencyLabel.Location = new System.Drawing.Point(12, 130);
+            this.baseCurrencyLabel.Location = new System.Drawing.Point(12, 89);
             this.baseCurrencyLabel.Name = "baseCurrencyLabel";
             this.baseCurrencyLabel.Size = new System.Drawing.Size(124, 13);
             this.baseCurrencyLabel.TabIndex = 6;
@@ -111,10 +75,35 @@
             "EUR",
             "RUB",
             "UAH"});
-            this.baseCurrencyComboBox.Location = new System.Drawing.Point(12, 146);
+            this.baseCurrencyComboBox.Location = new System.Drawing.Point(12, 105);
             this.baseCurrencyComboBox.Name = "baseCurrencyComboBox";
             this.baseCurrencyComboBox.Size = new System.Drawing.Size(121, 21);
             this.baseCurrencyComboBox.TabIndex = 7;
+
+            // 
+            // currencyLabel
+            // 
+            this.currencyLabel.AutoSize = true;
+            this.currencyLabel.Location = new System.Drawing.Point(12, 130);
+            this.currencyLabel.Name = "currencyLabel";
+            this.currencyLabel.Size = new System.Drawing.Size(113, 13);
+            this.currencyLabel.TabIndex = 4;
+            this.currencyLabel.Text = "Валюта конвертации:";
+
+            // 
+            // currencyComboBox
+            // 
+            this.currencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.currencyComboBox.FormattingEnabled = true;
+            this.currencyComboBox.Items.AddRange(new object[] {
+            "USD",
+            "EUR",
+            "RUB",
+            "UAH"});
+            this.currencyComboBox.Location = new System.Drawing.Point(12, 146);
+            this.currencyComboBox.Name = "currencyComboBox";
+            this.currencyComboBox.Size = new System.Drawing.Size(121, 21);
+            this.currencyComboBox.TabIndex = 5;
 
             // 
             // calculateButton
@@ -139,8 +128,7 @@
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 411); // Размер формы
-            this.Controls.Add(this.discountChart); // Добавление графика в форму
+            this.ClientSize = new System.Drawing.Size(284, 311);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.baseCurrencyComboBox);
